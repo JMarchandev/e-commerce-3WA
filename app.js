@@ -1,17 +1,36 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+<<<<<<< HEAD
+const multer = require('multer');
+const mongoose = require('mongoose');
+
+// mongoose.connect("mongodb://localhost/demo")
+// .then(() => {console.log('Connect to mongodb')})
+// .catch(() => {console.log('Connect to mongodb')})
+
+ mongoose.connect("mongodb+srv://e-commerce:e-commerce@cluster0.ngvph.mongodb.net/e-commerce?retryWrites=true&w=majority",
+ {useNewUrlParser: true,
+useUnifiedTopology: true})
+ .then(() => {console.log('Connect to mongodb')})
+ .catch((err) => {console.log(err)})
+=======
 
 const mongoose = require('mongoose');
 
 mongoose.connect("mongodb://localhost/demo")
 .then(() => {console.log('Connect to mongodb')})
 .catch(() => {console.log('Connect to mongodb')})
+>>>>>>> 0bac29410903abda07f4669c90f9fc1362a577ca
 
 const port = 3001;
 const shopRoutes = require('./routes/shop.js')
 const adminRoutes = require('./routes/admin.js')
 
+<<<<<<< HEAD
+app.use(express.static('uploads'));
+=======
+>>>>>>> 0bac29410903abda07f4669c90f9fc1362a577ca
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
