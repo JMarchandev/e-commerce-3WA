@@ -10,7 +10,11 @@ exports.getAddProduct = (req, res, next) => {
 
 exports.postAddProduct = async (req, res, next) => {
     const product = await new ProductSchema({
+<<<<<<< HEAD
+        
+=======
         ...req.body, isShown:true
+>>>>>>> 0bac29410903abda07f4669c90f9fc1362a577ca
     });
     const newProduct = await product.save();
     console.log(newProduct);
